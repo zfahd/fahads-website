@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fahad Shah — Agentic Automation Developer</title>
+  <meta name="description" content="Fahad Shah is a UiPath Certified Professional and agentic automation developer who builds bots to drive digital modernization and keep critical operations running.">
+  <meta name="theme-color" content="#0a0e14">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="canonical" href="https://zfahad.netlify.app/">
+
+  <!-- Link preview (LinkedIn, Slack, iMessage, X, etc.). Image URLs must be absolute for LinkedIn.
+       To move to a new address, run: npm run site-url -- https://new-address/ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zfahad.netlify.app/">
+  <meta property="og:site_name" content="Fahad Shah">
+  <meta property="og:title" content="Fahad Shah — Agentic Automation Developer">
+  <meta property="og:description" content="UiPath Certified Professional building bots that drive digital modernization and keep critical operations running.">
+  <meta property="og:image" content="https://zfahad.netlify.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Fahad Shah — Software Engineer, Agentic Automation, RPA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fahad Shah — Agentic Automation Developer">
+  <meta name="twitter:description" content="UiPath Certified Professional building bots that drive digital modernization and keep critical operations running.">
+  <meta name="twitter:image" content="https://zfahad.netlify.app/assets/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+    body {
+      background-color: #0a0e14;
+      color: #ecf2f8;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+    /* the system cursor is hidden only after the custom cursor script adds .custom-cursor */
+    @media (pointer: fine) { html.custom-cursor body, html.custom-cursor a, html.custom-cursor button { cursor: none; } }
+    main:focus { outline: none; }
+    .eyebrow { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #9fb0c3; }
+    .rule-glow { height: 1px; width: 330px; max-width: 100%; background: linear-gradient(90deg, transparent, #1a8f7c 30%, #2fd9bc 55%, transparent); }
+    .tag { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; color: #9fb0c3; border-bottom: 1px solid rgba(159,176,195,.35); padding-bottom: 3px; }
+    .lnk { transition: color .2s cubic-bezier(.34,1.56,.64,1), opacity .2s; }
+    .lnk:hover { color: #2fd9bc; }
+    .lnk:active { opacity: .7; }
+    .dg { opacity: 0; transform: translateY(6px); transition: opacity .5s ease, transform .6s cubic-bezier(.34,1.56,.64,1); }
+    .in .dg { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .dg { opacity: 1; transform: none; transition: none; } }
+    /* Portrait cut-out: scan reveal, float, cursor tilt, teal rim glow */
+    .portrait { transform: rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)); transition: transform .4s ease-out;
+      clip-path: inset(-30px -30px 100% -30px); animation: preveal 1.6s cubic-bezier(.65,0,.35,1) .3s forwards; }
+    /* glow sits on an outer wrapper so the edge mask below doesn't clip it */
+    .portrait-glow { filter: drop-shadow(0 0 1px rgba(47,217,188,.5)) drop-shadow(0 0 18px rgba(47,217,188,.16)); }
+    /* the source video crops the feet, elbow and waving sleeve at its frame edges, so fade those edges out */
+    .portrait-media { -webkit-mask-image: linear-gradient(to bottom, #000 86%, transparent), linear-gradient(to right, transparent, #000 7%, #000 95%, transparent);
+      mask-image: linear-gradient(to bottom, #000 86%, transparent), linear-gradient(to right, transparent, #000 7%, #000 95%, transparent);
+      -webkit-mask-composite: source-in; mask-composite: intersect; }
+    #avatar-canvas { transition: opacity .3s; }
+    .avatar-crop { -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent), linear-gradient(to right, transparent, #000 9%, #000 93%, transparent);
+      mask-image: linear-gradient(to bottom, #000 80%, transparent), linear-gradient(to right, transparent, #000 9%, #000 93%, transparent);
+      -webkit-mask-composite: source-in; mask-composite: intersect;
+      animation: crop-in .9s ease-out .2s both; }
+    #avatar-canvas-m { transition: opacity .3s; }
+    @keyframes crop-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .avatar-crop { animation: none; } }
+    .portrait-scan { top: 0; background: #2fd9bc; box-shadow: 0 0 12px 2px rgba(47,217,188,.7); opacity: 0; animation: pscan 1.6s cubic-bezier(.65,0,.35,1) .3s; }
+    @keyframes preveal { to { clip-path: inset(-30px -30px -30px -30px); } }
+    @keyframes pscan { 0% { top: 0; opacity: 1; } 90% { opacity: 1; } 100% { top: 100%; opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .portrait-scan { animation: none; } .portrait { animation: none; clip-path: none; transition: none; } }
+    :focus-visible { outline: 2px solid #2fd9bc; outline-offset: 3px; }
+    #cursor { position: fixed; left: 0; top: 0; width: 34px; height: 34px; border: 1px solid #2fd9bc; border-radius: 9999px; pointer-events: none; z-index: 100; opacity: 0; transform: translate(-50%, -50%); transition: opacity .2s, width .2s, height .2s; }
+    .rail-dot { width: 7px; height: 7px; border-radius: 9999px; border: 1px solid #1a8f7c; transition: transform .2s cubic-bezier(.34,1.56,.64,1), background-color .2s; }
+    .rail-item.is-active .rail-dot { background: #2fd9bc; border-color: #2fd9bc; }
+    .rail-item .rail-label { opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
+    .rail-item.is-active .rail-label, .rail-item:hover .rail-label { opacity: 1; transform: none; }
+  </style>
+  <!-- Tailwind build (npm run build:css). Loaded after the custom styles, matching the old CDN order. -->
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="min-h-screen">
+  <a href="#top" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-teal focus:px-4 focus:py-2 focus:font-mono focus:text-[13px] focus:text-ink">Skip to content</a>
+  <div id="cursor" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/[.05] bg-[#0a0e14]/90 backdrop-blur">
+    <div class="mx-auto flex h-[76px] max-w-[72rem] items-center justify-between px-6">
+      <a href="#top" aria-label="Fahad Shah, back to top" class="lnk -my-[10px] py-[10px] font-mono text-[14px] tracking-[.25em] text-paper">FAHAD·SHAH</a>
+      <nav class="flex items-center gap-8">
+        <div class="hidden items-center gap-8 font-mono text-[11px] tracking-[.15em] text-paper-dim md:flex">
+                    <a href="#experience" class="lnk -my-[10px] py-[10px]">EXPERIENCE</a>
+          <a href="#projects" class="lnk -my-[10px] py-[10px]">PROJECTS</a>
+          <a href="#contact" class="lnk -my-[10px] py-[10px]">CONTACT</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- RIGHT RAIL -->
+  <nav aria-label="Sections" class="fixed right-[86px] top-[378px] z-40 hidden flex-col items-end gap-[26px] min-[1700px]:flex" id="rail">
+    <a href="#top" class="rail-item is-active flex h-[7px] items-center gap-3"><span class="rail-label font-mono text-[10px] tracking-[.2em] text-teal">01 · INDEX</span><span class="rail-dot"></span></a>
+    <a href="#experience" class="rail-item flex h-[7px] items-center gap-3"><span class="rail-label font-mono text-[10px] tracking-[.2em] text-teal">02 · EXPERIENCE</span><span class="rail-dot"></span></a>
+    <a href="#projects" class="rail-item flex h-[7px] items-center gap-3"><span class="rail-label font-mono text-[10px] tracking-[.2em] text-teal">03 · PROJECTS</span><span class="rail-dot"></span></a>
+    <a href="#contact" class="rail-item flex h-[7px] items-center gap-3"><span class="rail-label font-mono text-[10px] tracking-[.2em] text-teal">04 · CONTACT</span><span class="rail-dot"></span></a>
+  </nav>
+
+  <main id="top" tabindex="-1">
+    <!-- HERO -->
+    <section class="relative overflow-x-clip px-6 pt-[130px] md:pt-[200px] xl:px-0 xl:pt-[222px]">
+      <div class="relative mx-auto max-w-[72rem]">
+        <div class="relative z-10 max-w-[560px]">
+          <p class="eyebrow flex items-center gap-3"><span class="h-[6px] w-[6px] rounded-full bg-teal"></span>UIPATH &amp; AGENTIC AUTOMATION</p>
+          <h1 class="mt-[30px] text-[clamp(3.5rem,9vw,104px)] font-medium leading-[.95] tracking-[-.055em]">
+            <span class="block text-paper">Fahad</span>
+            <span class="block text-teal">Shah<span class="text-paper">.</span></span>
+          </h1>
+          <p class="mt-[29px] flex flex-wrap gap-x-4 gap-y-[6px] font-mono text-[14px] text-paper sm:gap-x-0"><span class="whitespace-nowrap"><span class="mr-2 text-teal sm:hidden">·</span>Software Engineer</span><span class="whitespace-nowrap"><span class="mr-2 text-teal sm:mx-4">·</span>Agentic Automation</span><span class="whitespace-nowrap"><span class="mr-2 text-teal sm:mx-4">·</span>RPA</span></p>
+          <p class="mt-[20px] max-w-[520px] text-[18px] leading-[29px] text-paper-dim">I build bots to drive digital modernization and help you keep critical operations running.</p>
+          <div class="mt-[34px] flex items-center gap-6">
+            <a href="#projects" class="lnk group flex h-[48px] items-center gap-6 border border-teal-deep bg-teal/[.04] px-[18px] text-[15px] text-paper hover:bg-teal/10 active:scale-[.98]">See what I've built <span class="text-teal transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">⟶</span></a>
+          </div>
+        </div>
+
+        <!-- Phones: head-and-shoulders crop of the same animated avatar -->
+        <div class="pointer-events-none relative mt-[44px] flex justify-center md:hidden">
+          <div class="absolute bottom-[-6px] h-[60px] w-[260px] rounded-[50%] bg-[radial-gradient(closest-side,rgba(47,217,188,.14),transparent)]"></div>
+          <div class="absolute inset-x-0 top-[10%] bottom-0 bg-[radial-gradient(closest-side,rgba(26,143,124,.16),transparent)]"></div>
+          <div class="portrait-glow relative">
+            <div class="avatar-crop relative h-[328px] w-[210px]">
+              <img src="assets/avatar-poster.webp" alt="Animated 3D cartoon of Fahad Shah" width="338" height="960" class="avatar-poster absolute inset-0 h-full w-full object-cover object-top">
+              <canvas id="avatar-canvas-m" width="338" height="528" class="absolute inset-0 h-full w-full opacity-0" aria-hidden="true"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="pointer-events-none absolute right-[-10px] top-[-10px] hidden h-[520px] w-[440px] origin-top-right scale-[.78] md:block lg:right-[20px] lg:top-[-20px] lg:scale-100 min-[1700px]:right-[-40px]">
+          <div class="absolute inset-x-[-40px] bottom-[-10px] h-[90px] rounded-[50%] bg-[radial-gradient(closest-side,rgba(47,217,188,.12),transparent)]"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(closest-side,rgba(26,143,124,.14),transparent)]"></div>
+          <div class="relative mx-auto h-[480px] w-[240px]" style="perspective:900px">
+            <div id="portrait" class="portrait relative flex h-full w-full justify-center">
+              <div class="portrait-glow relative h-full w-[169px]">
+                <div class="portrait-media relative h-full w-full">
+                  <img id="avatar-poster" src="assets/avatar-poster.webp" alt="Animated 3D cartoon of Fahad Shah" width="338" height="960" class="absolute inset-0 h-full w-full">
+                  <canvas id="avatar-canvas" width="338" height="960" class="absolute inset-0 h-full w-full opacity-0" aria-hidden="true"></canvas>
+                </div>
+              </div>
+              <div class="portrait-scan absolute inset-x-[-20px] h-[2px]"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between border-t border-white/[.08] pt-[24px] pb-[60px] md:mt-[137px]">
+          <div>
+            <p class="font-mono text-[10px] tracking-[.15em] text-paper-dim">CURRENTLY BUILDING AT</p>
+            <p class="mt-[6px] text-[16px] text-paper">Groundswell</p>
+          </div>
+          <a href="#experience" class="lnk group flex items-center gap-4 font-mono text-[13px] text-paper">Meet Fahad
+            <span class="flex h-[44px] w-[44px] items-center justify-center rounded-full border border-teal-deep text-teal transition-transform duration-200 group-hover:translate-y-0.5" aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="border-t border-white/[.04] bg-[#0c1119] px-6 pt-[72px] pb-[64px] md:pt-[96px] md:pb-[100px]">
+      <div class="mx-auto max-w-[1016px] xl:translate-x-[-44px]">
+        <p class="eyebrow">EXPERIENCE · 02</p>
+        <h2 class="mt-[14px] text-[32px] md:text-[40px] leading-[1.12] tracking-[-.02em]">From complex workflows to autonomous solutions.</h2>
+        <div class="rule-glow mt-[24px]"></div>
+
+        <div class="mt-[48px] md:mt-[64px]">
+          <article class="border-t border-white/[.08] pt-[29px] pb-[31px]">
+            <div class="flex flex-wrap items-baseline justify-between gap-2"><h3 class="text-[26px] leading-tight">Groundswell</h3><p class="font-mono text-[12px] text-teal">Aug 2026 - Present</p></div>
+            <p class="mt-[5px] text-[16px] text-paper">Agentic Automation Developer</p>
+            <ul class="mt-[23px] space-y-[14px] text-[16px] leading-[24px] text-paper-dim">
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Developing the Agentic Auditor, an AI-driven automation solution on the UiPath Platform that helps Department of War agencies respond to external audit requests.</span></li>
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Digesting, classifying and translating auditors' Provided by Client (PBC) requests through UiPath's Document Understanding platform.</span></li>
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Building bots to retrieve and deliver Key Supporting Documents (KSDs) across various government agency ERP systems and applications to fulfill PBC requests.</span></li>
+            </ul>
+          </article>
+          <article class="border-t border-white/[.08] pt-[29px] pb-[31px]">
+            <div class="flex flex-wrap items-baseline justify-between gap-2"><h3 class="text-[26px] leading-tight">Regions Bank</h3><p class="font-mono text-[12px] text-teal">Aug 2023 - Aug 2026</p></div>
+            <p class="mt-[5px] text-[16px] text-paper">Robotic Process Automation Developer II</p>
+            <ul class="mt-[23px] space-y-[14px] text-[16px] leading-[24px] text-paper-dim">
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Developed a reusable API library leveraging the bank’s Deposit System API to automate 12+ account maintenance processes, handling over 5,000 daily transactions and delivering cost savings equivalent to 6+ FTEs.</span></li>
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Designed and developed an automation solution that consolidated 200,000+ governance, risk, and control data elements into EPC, establishing a centralized repository for business processes, assets, and vendor engagements.</span></li>
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Developed intelligent document processing solutions using UiPath Document Understanding and ML models to automate data extraction and validation from unstructured financial documents, improving accuracy and reducing processing time.</span></li>
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Established an RPA Center of Excellence to standardize development practices, implement governance frameworks, and drive automation best practices.</span></li>
+            </ul>
+          </article>
+          <article class="border-t border-white/[.08] pt-[29px] pb-[31px]">
+            <div class="flex flex-wrap items-baseline justify-between gap-2"><h3 class="text-[26px] leading-tight">BP3 Global</h3><p class="font-mono text-[12px] text-teal">Jan 2022 - Jan 2024</p></div>
+            <p class="mt-[5px] text-[16px] text-paper">Intelligent Automation Consultant</p>
+            <ul class="mt-[23px] space-y-[14px] text-[16px] leading-[24px] text-paper-dim">
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Engineered UiPath workflows to automate month-end reconciliation in a Citrix environment, using computer vision and selector-based techniques for reliable navigation, data entry, validation and extraction.</span></li>
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Delivered end-to-end RPA solutions for enterprise clients, covering solution design, development and deployment.</span></li>
+            </ul>
+          </article>
+          <article class="border-t border-white/[.08] pt-[29px] pb-[31px]">
+            <div class="flex flex-wrap items-baseline justify-between gap-2"><h3 class="text-[26px] leading-tight">Regions Bank</h3><p class="font-mono text-[12px] text-teal">Jan 2020 - Jan 2022</p></div>
+            <p class="mt-[5px] text-[16px] text-paper">Automation Analyst</p>
+            <ul class="mt-[23px] space-y-[14px] text-[16px] leading-[24px] text-paper-dim">
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Ran process and cost/benefit analyses to align IT solutions with business initiatives.</span></li>
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Served as the liaison between business units and IT to define requirements for RPA solutions.</span></li>
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Managed and monitored production jobs in UiPath Orchestrator.</span></li>
+            </ul>
+          </article>
+          <article class="border-t border-white/[.08] pt-[29px] pb-[31px]">
+            <div class="flex flex-wrap items-baseline justify-between gap-2"><h3 class="text-[26px] leading-tight">BBVA</h3><p class="font-mono text-[12px] text-teal">May 2019 - Dec 2019</p></div>
+            <p class="mt-[5px] text-[16px] text-paper">Robotics Intern</p>
+            <ul class="mt-[23px] space-y-[14px] text-[16px] leading-[24px] text-paper-dim">
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Developed an Automation Anywhere script to download and move audit report files.</span></li>
+              <li class="flex gap-3"><span class="text-teal-deep" aria-hidden="true">•</span><span>Supported senior engineers with defect triage and production readiness.</span></li>
+            </ul>
+          </article>
+          <div class="space-y-[10px] border-t border-white/[.08] pt-[32px] font-mono text-[13px] text-paper-dim">
+            <p><a href="https://www.credential.net/b00a6cd6-e15e-42e0-ae59-1fdfbc988381" target="_blank" rel="noopener noreferrer" class="lnk group py-[4px]"><span class="text-teal">UiPath Certified Professional</span> · Automation Developer <span class="text-teal transition-transform duration-200 inline-block group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a> <span class="text-paper-faint">· Verified</span></p>
+            <p><span class="text-teal">B.S. Computer Information Science</span> · University of Alabama at Birmingham · 2019</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="bg-[#0a0d12] px-6 pt-[72px] pb-[40px] md:pt-[96px] md:pb-[148px]">
+      <div class="mx-auto max-w-[1016px] xl:translate-x-[-44px]">
+        <p class="eyebrow">PROJECTS · 03</p>
+        <h2 class="mt-[14px] text-[32px] md:text-[40px] leading-[1.12] tracking-[-.02em]">Complex challenges.<br>Simple solutions.</h2>
+        <div class="rule-glow mt-[23px]"></div>
+
+        <div class="mt-[48px] md:mt-[64px]" id="project-list"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="relative overflow-hidden border-t border-white/[.06] px-6 pt-[72px] pb-[72px] md:pt-[96px] md:pb-[90px]" style="background: radial-gradient(60% 50% at 15% 10%, rgba(26,143,124,.05), transparent 70%), radial-gradient(50% 60% at 85% 90%, rgba(47,217,188,.015), transparent 70%), #0a0d12;">
+      <div class="mx-auto max-w-[1016px] xl:translate-x-[-44px]">
+        <p class="eyebrow">CONTACT · 04</p>
+        <h2 class="mt-[18px] text-[clamp(3rem,7vw,72px)] leading-[.93] tracking-[-.04em]">Let's build<br>what's <span class="text-teal">next.</span></h2>
+        <p class="mt-[20px] text-[17px] text-paper-dim">Agentic Automation Developer · UiPath Certified Professional</p>
+
+        <p class="mt-[48px] md:mt-[64px] font-mono text-[10px] tracking-[.2em] text-paper-dim">START A CONVERSATION</p>
+        <div class="mt-[12px] flex max-w-[640px] gap-[8px]">
+          <a href="mailto:Fahad.bham1@gmail.com" class="group flex h-[65px] min-w-0 flex-1 items-center justify-between gap-3 bg-teal px-[16px] text-[16px] text-ink sm:px-[21px] sm:text-[18px] md:text-[22px] transition-opacity hover:opacity-90 active:opacity-80">Fahad.bham1@gmail.com <span class="text-[22px] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true">↗</span></a>
+          <button type="button" id="copy" aria-label="Copy email address" class="flex h-[65px] w-[64px] shrink-0 flex-col sm:w-[76px] items-center justify-center gap-[4px] border border-teal-deep bg-[#0d131b] font-mono text-[11px] text-paper-dim hover:border-teal hover:text-teal active:scale-[.97]">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="8" y="8" width="12" height="12"/><path d="M16 8V4H4v12h4"/></svg><span id="copy-label" aria-hidden="true">Copy</span>
+          </button>
+          <span id="copy-status" class="sr-only" role="status" aria-live="polite"></span>
+        </div>
+        <div class="mt-[52px] grid max-w-[424px] grid-cols-2 gap-4 font-mono text-[13px] text-paper">
+          <a href="https://www.linkedin.com/in/fahad-shah-a67357377" target="_blank" rel="noopener noreferrer" class="lnk flex justify-between border-b border-white/25 pb-[14px]">LinkedIn <span class="text-[10px]" aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a>
+          <a href="https://github.com/zfahd" target="_blank" rel="noopener noreferrer" class="lnk flex justify-between border-b border-white/25 pb-[14px]">GitHub <span class="text-[10px]" aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a>
+        </div>
+        <p class="mt-[30px] font-mono text-[11px] text-paper-dim">Fahad Shah / San Bernardino, CA · Open to remote</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/[.06] bg-[#0a0d12]">
+    <div class="mx-auto flex h-[76px] max-w-[72rem] items-center justify-between px-6">
+      <p class="font-mono text-[12px] text-paper-dim">© 2026 Fahad Shah</p>
+      <a href="#top" class="lnk -my-[10px] py-[10px] font-mono text-[12px] text-teal">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script>
+    // Architecture diagrams (SVG, no proprietary content)
+    let dgi = 0;
+    const dg = (inner) => `<g class="dg" style="transition-delay:${(dgi++) * 70}ms">${inner}</g>`;
+    const node = (x, y, w, label, sub, on = true) => dg(`
+      <rect x="${x}" y="${y}" width="${w}" height="${sub ? 44 : 36}" fill="${on ? 'rgba(47,217,188,.06)' : 'rgba(159,176,195,.03)'}" stroke="${on ? '#1a8f7c' : 'rgba(159,176,195,.28)'}" stroke-dasharray="${on ? '' : '3 3'}"/>
+      <text x="${x + w / 2}" y="${y + (sub ? 19 : 22)}" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" fill="${on ? '#ecf2f8' : '#7a8ca0'}">${label}</text>
+      ${sub ? `<text x="${x + w / 2}" y="${y + 34}" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="${on ? '#a7f0e0' : '#7a8ca0'}">${sub}</text>` : ''}`);
+    const link = (d, on = true) => dg(`<path d="${d}" fill="none" stroke="${on ? '#2fd9bc' : 'rgba(159,176,195,.35)'}" stroke-width="1.2" stroke-dasharray="${on ? '' : '3 3'}" marker-end="url(#${on ? 'ah' : 'ahd'})"/>`);
+    const label = (x, y, t, c = '#7a8ca0', a = 'start') => dg(`<text x="${x}" y="${y}" text-anchor="${a}" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="1.6" fill="${c}">${t}</text>`);
+    const defs = `<defs>
+      <marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L8 4L0 8z" fill="#2fd9bc"/></marker>
+      <marker id="ahd" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L8 4L0 8z" fill="rgba(159,176,195,.45)"/></marker></defs>`;
+    const svg = (title, inner) => `<svg viewBox="0 0 480 310" class="h-auto w-full max-w-[480px]" role="img" aria-label="${title}">${defs}${inner}</svg>`;
+    const diagrams = {};
+    dgi = 0;
+    diagrams.core = svg('Before: bots drove mainframe screens. After: bots call BankLib, a reusable library on the Deposit System API.',
+      label(10, 22, 'BEFORE · SCREEN AUTOMATION') +
+      node(10, 36, 120, 'UiPath bots', '12+ processes', false) + link('M134 58H172', false) +
+      node(176, 36, 128, 'Mainframe screens', 'UI selectors', false) + link('M308 58H346', false) +
+      node(350, 36, 120, 'COBOL mainframe', 'retired', false) +
+      dg('<line x1="10" y1="118" x2="470" y2="118" stroke="rgba(159,176,195,.12)" stroke-dasharray="2 4"/>') +
+      dg('<text x="240" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#2fd9bc" letter-spacing="1.6" style="paint-order:stroke" stroke="#111824" stroke-width="8">⟶ CUTOVER ⟶</text>') +
+      label(10, 154, 'AFTER · API INTEGRATION', '#2fd9bc') +
+      node(10, 168, 120, 'UiPath bots', 'rebuilt') + link('M134 190H172') +
+      node(176, 168, 128, 'BankLib library', 'Deposit System API') + link('M308 190H346') +
+      node(350, 168, 120, 'Temenos', 'deposit platform') +
+      dg('<line x1="10" y1="244" x2="470" y2="244" stroke="rgba(159,176,195,.12)"/>') +
+      label(10, 272, '12+ PROCESSES', '#ecf2f8') + label(240, 272, '5,000+ TRANSACTIONS / DAY', '#ecf2f8', 'middle') + label(470, 272, '6+ FTE SAVED', '#a7f0e0', 'end') +
+      label(10, 294, 'rebuilt') + label(240, 294, 'no gap at cutover', '#7a8ca0', 'middle') + label(470, 294, 'capacity', '#7a8ca0', 'end'));
+    dgi = 0;
+    diagrams.sync = svg('Daily pipeline: GRC export, compare bot, Orchestrator queue, update bot, EPC folders.',
+      label(10, 22, 'DAILY · 3 BOTS', '#2fd9bc') +
+      node(10, 36, 100, 'GRC', 'source') + link('M114 58H156') +
+      node(160, 36, 140, 'Extract bot', 'daily CSV export') + link('M304 58H346') +
+      node(350, 36, 120, 'Compare bot', 'new / changed only') + link('M410 84V118') +
+      node(340, 122, 130, 'Orchestrator queue', 'transaction items') + link('M336 144H304') +
+      node(160, 122, 140, 'Update bot', 'EPC API') + link('M156 144H114') +
+      node(10, 122, 100, 'EPC', 'central library') +
+      dg(`<path d="M60 170V190H405M60 190V202M170 190V202M285 190V202M405 190V202" fill="none" stroke="#1a8f7c" stroke-width="1"/>`) +
+      ['Risks', 'Controls', 'Assets', 'Engagements'].map((t, i) => {
+        const x = [12, 120, 235, 352][i], w = [96, 100, 100, 106][i];
+        return dg(`<path d="M${x} 206h14l4 -4h${w - 18}v26h-${w}z" fill="rgba(47,217,188,.04)" stroke="rgba(47,217,188,.45)"/><text x="${x + w / 2}" y="222" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#ecf2f8">${t}</text>`);
+      }).join('') +
+      dg('<line x1="10" y1="252" x2="470" y2="252" stroke="rgba(159,176,195,.12)"/>') +
+      label(10, 278, 'DAILY SYNC', '#ecf2f8') + label(240, 278, '200,000+ DATA ELEMENTS', '#ecf2f8', 'middle') + label(470, 278, '0 MANUAL ENTRY', '#a7f0e0', 'end') +
+      label(10, 298, 'GRC ⟶ EPC') + label(240, 298, 'consolidated in EPC', '#7a8ca0', 'middle') + label(470, 298, 'no data entry', '#7a8ca0', 'end'));
+
+    // Projects
+    const projects = [
+      { tag: 'CORE BANKING MIGRATION', title: 'Core Banking Migration', window: 'Architecture · before / after', diagram: 'core',
+        problem: "The bank's core deposit migration from a COBOL mainframe system to Temenos, a modern web-based cloud platform, would have broken 12+ business-critical account maintenance automations that relied on mainframe screens, putting daily deposit operations at risk of downtime.",
+        built: "A reusable API library on the bank's Deposit System API, and moved all 12+ account maintenance processes from front-end mainframe screen automation to back-end processing via API integrations on Temenos.",
+        outcome: '5,000+ daily transactions · 6+ FTEs saved',
+        steps: ['Receive request', 'Query BankLib', 'Update account'],
+        note: 'No gap in daily processing at cutover. The API design is faster and more stable than screen automation because it no longer depends on screen layouts, load times or UI changes.',
+        tags: ['UiPath', 'REFramework', 'BankLib', 'Deposit System API', 'Temenos', 'COBOL mainframe'] },
+      { tag: 'DATA INTEGRATION PIPELINE', title: 'Data migration from GRC to Centralized Document Repository', window: 'Architecture · daily sync', diagram: 'sync',
+        problem: "Regions adopted Interfacing's Enterprise Process Center (EPC) as its central repository for risks, controls, assets and engagements, but all of that data lived in GRC. Without automation, teams would have entered it by hand.",
+        built: 'A three-bot pipeline: A daily GRC export bot to retrieve the data, a comparison algorithm to detect new and modified records, and an update bot that writes each record to the right EPC folder through the EPC API.',
+        outcome: '200,000+ data elements consolidated · zero manual data entry',
+        steps: ['Export from GRC', 'Detect changes', 'Update via API'],
+        note: 'Cleared one of the biggest obstacles in the bank-wide initiative and made EPC a reliable central library for process owners.',
+        tags: ['Data Migration', 'Data Manipulation', 'API Ingest'] },
+    ];
+    document.getElementById('project-list').innerHTML = projects.map((p, i) => `
+      <article class="border-t border-white/[.08] pt-[33px]">
+        <p class="font-mono text-[12px] tracking-[.1em]"><span class="text-paper-dim">0${i + 1} /</span><span class="ml-4 text-teal">${p.tag}</span></p>
+        <h3 class="mt-[8px] text-[34px] leading-[1.2] tracking-[-.01em]">${p.title}</h3>
+        <div class="mt-[22px] grid gap-6 lg:grid-cols-2">
+          <div class="relative flex flex-col border border-white/[.1] bg-[#111824] lg:h-[390px]">
+            <div class="flex h-[38px] items-center justify-between border-b border-white/[.07] px-[12px]">
+              <span class="flex gap-[4px]"><i class="h-[5px] w-[5px] rounded-full bg-teal-deep"></i><i class="h-[5px] w-[5px] rounded-full bg-teal-deep"></i><i class="h-[5px] w-[5px] rounded-full bg-teal-deep"></i></span>
+              <span class="font-mono text-[10.5px] text-paper-dim">${p.window}</span>
+            </div>
+            <div class="flex flex-1 items-center justify-center px-[4px] py-[16px] sm:px-[14px] lg:py-[10px]">${diagrams[p.diagram] || ''}</div>
+          </div>
+          <div>
+            <p class="font-mono text-[10px] tracking-[.15em] text-paper-dim">PROBLEM</p>
+            <p class="mt-[6px] text-[16px] leading-[25px] text-paper">${p.problem}</p>
+            <p class="mt-[18px] font-mono text-[10px] tracking-[.15em] text-paper-dim">I BUILT</p>
+            <p class="mt-[6px] text-[16px] leading-[25px] text-paper">${p.built}</p>
+            <p class="mt-[18px] font-mono text-[10px] tracking-[.15em] text-paper-dim">OUTCOME</p>
+            <p class="mt-[6px] text-[16.5px] text-teal-pale">${p.outcome}</p>
+            <div class="mt-[22px] grid grid-cols-1 gap-y-[10px] border border-white/[.12] bg-[#0d131c] px-[17px] py-[15px] sm:grid-cols-3 sm:gap-y-0">
+              ${p.steps.map((s, j) => `<div class="relative flex items-baseline gap-3 sm:block">${j ? '<span class="absolute -left-[26px] top-[-1px] hidden font-mono text-[13px] text-teal sm:block" aria-hidden="true">⟶</span>' : ''}<p class="font-mono text-[12px] text-teal">0${j + 1}</p><p class="font-mono text-[12px] text-paper sm:mt-[10px]">${s}</p></div>`).join('')}
+            </div>
+            <p class="mt-[18px] text-[14px] leading-[22px] text-paper-faint">${p.note}</p>
+            <div class="mt-[14px] flex flex-wrap gap-x-3 gap-y-[6px]">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+          </div>
+        </div>
+        <div class="${i < projects.length - 1 ? 'h-[72px]' : 'h-[48px]'}"></div>
+      </article>`).join('');
+
+    // Reveal diagrams on scroll
+    const svgs = document.querySelectorAll('#project-list svg');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .3 });
+      svgs.forEach((el) => io.observe(el));
+    } else svgs.forEach((el) => el.classList.add('in'));
+
+    // Copy email
+    document.getElementById('copy').addEventListener('click', async () => {
+      const l = document.getElementById('copy-label'), status = document.getElementById('copy-status');
+      let ok = true;
+      try { await navigator.clipboard.writeText('Fahad.bham1@gmail.com'); } catch { ok = false; }
+      l.textContent = ok ? 'Copied' : 'Failed';
+      status.textContent = ok ? 'Email address copied' : 'Could not copy. The address is Fahad.bham1@gmail.com';
+      setTimeout(() => { l.textContent = 'Copy'; status.textContent = ''; }, 2000);
+    });
+
+
+    // Rail active state
+    const ids = ['top', 'experience', 'projects', 'contact'];
+    const railItems = document.querySelectorAll('.rail-item');
+    const onScroll = () => {
+      let idx = 0;
+      ids.forEach((id, i) => { if (document.getElementById(id).getBoundingClientRect().top < innerHeight * .4) idx = i; });
+      railItems.forEach((r, i) => r.classList.toggle('is-active', i === idx));
+    };
+    addEventListener('scroll', onScroll, { passive: true });
+
+    // Custom cursor
+    const cur = document.getElementById('cursor');
+    if (matchMedia('(pointer: fine)').matches) {
+      document.documentElement.classList.add('custom-cursor');
+      addEventListener('mousemove', (e) => { cur.style.opacity = 1; cur.style.transform = `translate(${e.clientX - 17}px, ${e.clientY - 17}px)`; });
+      document.addEventListener('mouseleave', () => (cur.style.opacity = 0));
+    }
+
+    // Portrait tilt toward the cursor
+    const portrait = document.getElementById('portrait');
+    if (portrait && matchMedia('(pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      window.addEventListener('mousemove', (e) => {
+        const r = portrait.getBoundingClientRect();
+        const dx = Math.max(-1, Math.min(1, (e.clientX - (r.left + r.width / 2)) / 600));
+        const dy = Math.max(-1, Math.min(1, (e.clientY - (r.top + r.height / 2)) / 600));
+        portrait.style.setProperty('--ry', `${dx * 8}deg`);
+        portrait.style.setProperty('--rx', `${-dy * 6}deg`);
+      });
+    }
+
+    // Animated avatar: H.264 video with colour on the top half and the alpha matte on the bottom half.
+    // Each frame is recombined into a transparent canvas: the full-body one (tablet/desktop) or the
+    // head-and-shoulders crop (phones), whichever is on screen. Posters show until the first frame,
+    // and stay for reduced-motion users.
+    (() => {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const full = document.getElementById('avatar-canvas');
+      const crop = document.getElementById('avatar-canvas-m');
+      const targets = [full, crop].filter(Boolean);
+      const visible = (c) => !!c.offsetParent;
+      if (!targets.some(visible)) return;
+      const W = 338, H = 960;
+      const work = document.createElement('canvas'); work.width = W; work.height = H * 2;
+      const wctx = work.getContext('2d', { willReadFrequently: true });
+      const buf = {};
+      for (const c of targets) buf[c.id] = { ctx: c.getContext('2d'), img: c.getContext('2d').createImageData(W, c.height) };
+      const video = Object.assign(document.createElement('video'), { muted: true, loop: true, playsInline: true, preload: 'auto' });
+      video.setAttribute('playsinline', '');
+      video.src = 'assets/avatar-stacked.mp4';
+      const draw = (c) => {
+        const rows = c.height; // the crop canvas only needs the top rows
+        wctx.drawImage(video, 0, 0, W, H * 2);
+        const col = wctx.getImageData(0, 0, W, rows).data;
+        const mat = wctx.getImageData(0, H, W, rows).data;
+        const { ctx, img } = buf[c.id], dst = img.data, n = W * rows * 4;
+        for (let i = 0; i < n; i += 4) {
+          const a = mat[i];
+          if (a < 6) { dst[i + 3] = 0; continue; }
+          // colour was premultiplied on black before encoding: un-premultiply
+          const k = 255 / a;
+          dst[i] = Math.min(255, col[i] * k); dst[i + 1] = Math.min(255, col[i + 1] * k); dst[i + 2] = Math.min(255, col[i + 2] * k);
+          dst[i + 3] = a;
+        }
+        ctx.putImageData(img, 0, 0);
+        if (c.style.opacity !== '1') {
+          c.style.opacity = '1';
+          const poster = c.parentElement.querySelector('img');
+          if (poster) poster.style.opacity = '0';
+        }
+      };
+      const loop = () => {
+        for (const c of targets) if (visible(c)) draw(c);
+        'requestVideoFrameCallback' in video ? video.requestVideoFrameCallback(loop) : requestAnimationFrame(loop);
+      };
+      video.addEventListener('playing', () => loop(), { once: true });
+      // play only while one of the avatars is on screen
+      const onScreen = new Set();
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) e.isIntersecting ? onScreen.add(e.target) : onScreen.delete(e.target);
+        onScreen.size ? video.play().catch(() => {}) : video.pause();
+      });
+      targets.forEach((c) => io.observe(c));
+    })();
+  </script>
+</body>
+</html>

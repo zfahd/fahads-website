@@ -1,0 +1,28 @@
+# Netlify: build the Tailwind CSS, then publish only ./public
+[build]
+  command = "npm run build:css"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # puppeteer is only used for local screenshots: skip its Chrome download on Netlify
+  PUPPETEER_SKIP_DOWNLOAD = "true"
+
+# Long cache for media and icons. These keep the same file name when they change,
+# so rename the file (e.g. avatar-v2.mp4) if you replace one.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# The CSS changes with every edit, so let browsers revalidate it
+[[headers]]
+  for = "/assets/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -1,0 +1,5 @@
+/* Tailwind entry point. Compiled to public/assets/styles.css by `npm run build:css`.
+   Page-specific custom CSS (cursor, glow, avatar masks, diagram animation) lives in the <style> block in public/index.html. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

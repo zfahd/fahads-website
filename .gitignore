@@ -1,0 +1,12 @@
+# dependencies and local output
+node_modules/
+temporary screenshots/
+.DS_Store
+
+# private: never commit (resume contains a phone number)
+*.pdf
+.env
+.env.*
+
+# local Netlify CLI state
+.netlify/

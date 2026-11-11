@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zfahad.netlify.app/sitemap.xml
