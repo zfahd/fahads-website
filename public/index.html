@@ -462,5 +462,19 @@
       targets.forEach((c) => io.observe(c));
     })();
   </script>
+
+  <!-- Cloudflare Web Analytics (cookie-free). Only loads on the live address from the canonical link,
+       so local previews and screenshot runs don't count as visits. -->
+  <script>
+    (() => {
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical || new URL(canonical.href).hostname !== location.hostname) return;
+      const s = document.createElement('script');
+      s.defer = true;
+      s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+      s.dataset.cfBeacon = JSON.stringify({ token: '8d992ce35585492cada9529836669e34' });
+      document.body.appendChild(s);
+    })();
+  </script>
 </body>
 </html>
